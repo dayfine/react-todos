@@ -1,6 +1,5 @@
-const ADD_TODO = 'TODO/ADD'
-const TOGGLE_TODO = 'TODO/TOGGLE'
-const REMOVE_TODO = 'TODO/REMOVE'
+
+import {ADD_TODO, TOGGLE_TODO, REMOVE_TODO} from './actionTypes.js'
 
 let nextTodoId = 10
 
