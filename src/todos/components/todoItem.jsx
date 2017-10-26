@@ -3,16 +3,8 @@ import { connect } from 'react-redux'
 import { toggleTodo, removeTodo } from '../actions.js'
 
 class TodoItem extends React.Component {
-  constructor () {
-    super(...arguments)
-
-    console.log('enter TodoItem constructor: ' + this.props.text)
-  }
-
   render () {
     const { onToggle, onRemove, completed, text } = this.props
-
-    console.log('enter TodoItem render: ' + text)
 
     return (
       <li className='todo-item'

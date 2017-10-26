@@ -7,15 +7,8 @@ const TodoList = ({todos, onClickTodo}) => {
   return (
     <ul className='todo-list'>
       {
-      todos.map((item) => (
-        <TodoItem
-          key={item.id}
-          id={item.id}
-          text={item.text}
-          completed={item.completed}
-        />
-        ))
-    }
+        todos.map((item) => (<TodoItem key={item.id} {...item} />))
+      }
     </ul>
   )
 }
@@ -29,7 +22,6 @@ const selectVisibleTodos = (todos, filter) => {
     case FilterTypes.UNCOMPLETED:
       return todos.filter(item => !item.completed)
     default:
-      console.log(filter)
       throw new Error('unsupported filter')
   }
 }
